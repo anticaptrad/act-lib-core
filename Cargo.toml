@@ -1,0 +1,19 @@
+[package]
+name = "act-lib-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+description = "Anticaptrad domain validation and read-only SeaORM persistence"
+repository = "https://github.com/anticaptrad/act-lib-core"
+
+[dependencies]
+act-interfaces = { git = "https://github.com/anticaptrad/act-interfaces", rev = "59324e3c602044d7e19a9223a7b42663332e03d1" }
+async-trait = "0.1"
+ores-lib-core = { git = "https://github.com/ores-otel/ores-lib-core", rev = "0a8d1eaad5df2cc2c0b676432313f4ac047f5191" }
+sea-orm = { version = "1.1", default-features = false, features = ["macros", "runtime-tokio-rustls", "sqlx-postgres"] }
+serde_json = "1"
+thiserror = "2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt"] }

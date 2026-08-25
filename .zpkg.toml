@@ -1,0 +1,32 @@
+[package]
+org = "anticaptrad"
+name = "act-lib-core"
+version = "0.1.0"
+description = "Anticaptrad domain validation and read-only SeaORM persistence"
+license = "MIT"
+keywords = ["anticaptrad", "domain", "seaorm", "postgres", "contracts"]
+language = "rust"
+
+[package.repository]
+vcs = "git"
+url = "https://github.com/anticaptrad/act-lib-core"
+
+[dependencies]
+"anticaptrad/act-interfaces" = "^0.1.0"
+"ores-otel/ores-lib-core" = "^0.1.0"
+
+[install]
+dir = ".vendor/.zed"
+
+[publish]
+include_readme = true
+tag_format = "v{version}"
+exclude = [".vendor/**", ".zed/**", "target/**", ".env", ".env.*"]
+smoke_test = "cargo test --all-targets --locked"
+
+[targets.rust]
+dir = "."
+adapter = "rust"
+
+[scripts]
+test = "cargo test --all-targets --locked"
