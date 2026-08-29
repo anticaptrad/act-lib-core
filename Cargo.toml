@@ -7,6 +7,11 @@ publish = false
 description = "Anticaptrad domain validation and read-only SeaORM persistence"
 repository = "https://github.com/anticaptrad/act-lib-core"
 
+[features]
+default = ["read-only"]
+read-only = []
+read-write = ["read-only"]
+
 [dependencies]
 act-interfaces = { git = "https://github.com/anticaptrad/act-interfaces", rev = "59324e3c602044d7e19a9223a7b42663332e03d1" }
 async-trait = "0.1"
