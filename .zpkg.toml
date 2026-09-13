@@ -14,6 +14,7 @@ url = "https://github.com/anticaptrad/act-lib-core"
 [dependencies]
 "anticaptrad/act-interfaces" = "^0.1.0"
 "ores-otel/ores-lib-core" = "^0.1.0"
+"oresoftware/next-loggers" = "^0.1.0"
 
 [install]
 dir = ".vendor/.zed"
